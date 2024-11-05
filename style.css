@@ -1,0 +1,30 @@
+/**
+ * Theme Name:        New York Tourism
+ * Description:       Custom Theme for New York Tourism Website
+ * Version:           1.0.0
+ * Author:            Fernando Sada 
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+ #images{
+   display:grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   max-width: 1000px;
+   margin: auto;
+   gap: 1rem;
+ }
+
+ #images img{
+   width: 100%;
+   aspect-ratio: 1/1;
+   object-fit: cover;
+ }
+
+ @media (min-width: 760px){
+   #images{
+      grid-template-columns: 1fr 1fr 1fr;   
+      grid-template-rows: 1fr;   
+   }
+ }
