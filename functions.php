@@ -33,10 +33,12 @@ function load_tailwind(){
     );
 };
 
+
+
+
 add_action('wp_enqueue_scripts','primary_stylesheet'); //LOADS STYLES WHEN WORDPRESS IS LOADING SCRIPTS
 add_action('wp_enqueue_scripts','load_bootstrap');  //LOADS BOOTSTRAP
 add_action('wp_enqueue_scripts','load_tailwind');  //LOADS TAILWIND
-
 
 
 
