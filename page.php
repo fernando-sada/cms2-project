@@ -1,11 +1,19 @@
 <?php get_header();?>
-<?php the_title();?>
-<?php the_content();?>
 
-    <?php 
-    if (is_page('Contact Us')) {
-        get_template_part("template-parts/part", "contact");
-    };
-    ?>
+<h1 class="text-3xl font-bold text-center py-6 bg-lightblue text-white"><?php the_title();?></h1>
+
+<div class="max-w-[1200px] mx-auto">
+    <?php the_content();?>
+
+        <?php
+        //GETTING Contact part if page is contact
+        if (is_page('Contact Us')) {
+            get_template_part("template-parts/part", "contact");
+        };
+        ?>
+</div>
+
+<!-- Inserting google map into all pages except for home -->
+<?php get_template_part("template-parts/part", "map");?>
 
 <?php get_footer();?>
