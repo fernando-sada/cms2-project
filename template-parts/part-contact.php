@@ -1,5 +1,5 @@
-<div>
-    <section>
+<section>
+    <div>
         <p><span class="material-symbols-outlined">
             location_on</span>Address</p>
         <p>Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US</p>
@@ -9,7 +9,7 @@
         <p><span class="material-symbols-outlined">
             mail</span>General Support</p>
         <p>info@newyorktourism.com</p>
-    </section>
+    </div>
     <div class="flex center">
         <h2>Send Us A Message</h2>
         <div>
@@ -27,4 +27,4 @@
         </div>
         <button>SEND MESSAGE</button>
     </div>
-</div>
+</section>

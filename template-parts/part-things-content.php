@@ -1,4 +1,4 @@
-<div>
+<section>
     <h3>Find what you love here</h3>
     <div>
         <img src="" alt="">
@@ -54,4 +54,4 @@
         <p>Lorem Ipsum</p>
         <button>more</button>
     </div>
-</div>
+</section>
