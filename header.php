@@ -12,7 +12,7 @@
                 extend: {
                     colors: {                       
                         black: '#000000',
-                        blue: '#000F5A',
+                        blue: '#00178C',
                         grayblue: '#1F4CEF',  
                         lightblue: '#0083CF',
                         gray: '#a6a4a5'
