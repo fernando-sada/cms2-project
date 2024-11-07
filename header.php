@@ -24,13 +24,13 @@
 </head>
 <body>
     <div class="">
-        <nav class="flex p-4 justify-between max-w-[1200px] mx-auto">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/logo.png" alt="logo">
+        <nav class="flex p-4 justify-between max-w-[1200px] mx-auto items-center">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/logo.svg" class="h-10" alt="logo">
             
             <?php 
         
             $args = [
-                'menu'                 => '',
+                'menu'                 => 'primary',
                 'container'            => 'ul',
                 'container_class'      => '',
                 'container_id'         => '',
