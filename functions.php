@@ -35,13 +35,26 @@ function load_tailwind(){
 
 
 
-
-add_action('wp_enqueue_scripts','primary_stylesheet'); //LOADS STYLES WHEN WORDPRESS IS LOADING SCRIPTS
-add_action('wp_enqueue_scripts','load_bootstrap');  //LOADS BOOTSTRAP
 add_action('wp_enqueue_scripts','load_tailwind');  //LOADS TAILWIND
+add_action('wp_enqueue_scripts','primary_stylesheet'); //LOADS STYLES WHEN WORDPRESS IS LOADING SCRIPTS
+//add_action('wp_enqueue_scripts','load_bootstrap');  //LOADS BOOTSTRAP
 
 
 
+// function replace_content( $text_content ) {
+	
+// 		$text = array(
+// 			'<p>' => '<p class="text-black">',
+// 			'<h1 class="wp-block-heading">' => '<h1 class="text-lg text-black wp-block-heading">',
+//             '<a class="wp-block-button__link wp-element-button">' => '<a class="wp-block-button__link wp-element-button bg-lightblue">',
+// 		);
+
+// 		$text_content = str_ireplace( array_keys( $text ), $text, $text_content );
+	
+
+// 	return $text_content;
+// }
+// add_filter( 'the_content', 'replace_content' );
 
 
 // *****************************************************
