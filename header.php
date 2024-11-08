@@ -10,12 +10,13 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {                       
+                    colors: {              
+                        // DEFINED COLORS         
                         black: '#000000',
+                        white: 'FFFFFF',
                         navyblue: '#00178C',
-                        blue: '#1F4CEF',  
                         lightblue: '#0083CF',
-                        gray: 'rgb(226 232 240)'
+                        gray: 'E2E8F0'
                     },                      
                 },
             },
