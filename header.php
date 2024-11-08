@@ -13,10 +13,10 @@
                     colors: {              
                         // DEFINED COLORS         
                         black: '#000000',
-                        white: 'FFFFFF',
+                        white: '#FFFFFF',
                         navyblue: '#00178C',
                         lightblue: '#0083CF',
-                        gray: 'E2E8F0'
+                        gray: '#E2E8F0'
                     },                      
                 },
             },
