@@ -5,21 +5,21 @@
             <div class="flex gap-4 justify-center md:justify-start">
                 <img class="row-span-2 rounded-full w-12" src="<?php echo get_theme_file_uri(); ?>/assets/avatar_1.png" alt="avatar user">
                 <div class="flex flex-col">
-                    <h4 class="font-bold">Axel Newell</h4>
-                    <h6>Founder, Virtual</h6>                
+                    <h4 class="font-bold">Sarah M.</h4>
+                    <h6>Graphic Designer</h6>                
                 </div>
             </div>
-            <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue".</blockquote>
+            <blockquote>"Visiting New York was a dream come true! The website’s recommendations for hidden gems and must-see spots made our trip unforgettable. From the top of the Empire State Building to delicious street food, it was all perfectly planned!".</blockquote>
         </div>
         <div class="flex flex-col gap-4 text-center md:text-left">
             <div class="flex gap-4 justify-center md:justify-start">
                 <img class="row-span-2 rounded-full w-12" src="<?php echo get_theme_file_uri(); ?>/assets/avatar_2.png" alt="avatar user">
                 <div class="flex flex-col">
-                    <h4 class="font-bold">Axel Newell</h4>
-                    <h6>Founder, Virtual</h6>                
+                    <h4 class="font-bold">David L</h4>
+                    <h6>Marketing Consultant</h6>                
                 </div>
             </div>
-            <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue".</blockquote>
+            <blockquote>"This site made our New York adventure seamless! We found amazing tours and insider tips that we’d never have discovered otherwise. Can't wait to visit again!".</blockquote>
         </div>
     </div>
 </section>

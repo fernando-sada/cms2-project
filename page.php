@@ -1,5 +1,7 @@
 <!-- HEADER -->
-<?php get_header();?>
+<div class="bg-gray">
+    <?php get_header();?>
+</div>
 
 <!-- TITLE -->
 <h1 class="text-3xl font-bold text-center py-6 bg-lightblue text-black">

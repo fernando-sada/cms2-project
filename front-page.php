@@ -1,5 +1,7 @@
 <!-- HEADER -->
-<?php get_header();?> 
+<div class="bg-gray">
+    <?php get_header();?>
+</div>
 
 <!-- HERO BANNER -->
 <?php get_template_part("template-parts/part", "hero")?> 
