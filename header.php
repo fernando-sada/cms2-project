@@ -24,7 +24,7 @@
         </script>
     </head>
     <body>       
-        <nav class="flex p-4 justify-between max-w-[1200px] mx-auto items-center">
+        <nav class="flex md:flex-row flex-col p-4 justify-between max-w-[1200px] mx-auto items-center">
 
             <!-- LOGO -->
             <a href="<?php echo get_home_url();?>">
@@ -39,7 +39,7 @@
                 'container_class'      => '',
                 'container_id'         => '',
                 'container_aria_label' => '',
-                'menu_class'           => 'font-medium flex gap-10', //ADD Tailwind class to <ul> here
+                'menu_class'           => 'font-medium flex flex-col md:flex-row md:gap-10 py-4 md:py-0 gap-4 w-full md:w-auto text-center', //ADD Tailwind class to <ul> here
                 'menu_id'              => '',
                 'echo'                 => true,
                 'fallback_cb'          => 'wp_page_menu',

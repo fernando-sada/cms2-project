@@ -49,8 +49,7 @@
 }
 
 #the_content section{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 
 .wp-block-gallery figure img{
@@ -81,3 +80,5 @@ nav ul li a:hover{
 #hero-banner .hero-banner-content, #hero-banner img, #hero-banner .hero-overlay{
   grid-area: 1 / 1; 
 }
+
+
