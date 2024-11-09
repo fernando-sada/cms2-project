@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New York Tourism</title>
-    <?php wp_head();?>
-    <!-- ADDING CUSTOM FONT IN TAILWIND CSS -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {              
-                        // DEFINED COLORS         
-                        black: '#000000',
-                        white: '#FFFFFF',
-                        navyblue: '#00178C',
-                        lightblue: '#0083CF',
-                        gray: '#E2E8F0'
-                    },                      
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New York Tourism</title>
+        <?php wp_head();?>
+        <!-- ADDING CUSTOM COLOURS IN TAILWIND CSS -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {              
+                            // DEFINED COLOUR PALETTE         
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            navyblue: '#00178C',
+                            lightblue: '#0083CF',
+                            gray: '#E2E8F0'
+                        },                      
+                    },
                 },
-            },
-        };
-    </script>
-</head>
-<body>
-    <div class="">
+            };
+        </script>
+    </head>
+    <body>       
         <nav class="flex p-4 justify-between max-w-[1200px] mx-auto items-center">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/logo.svg" class="h-10" alt="logo">
-            
-            <?php 
-        
+
+            <!-- LOGO -->
+            <a href="<?php echo get_home_url();?>">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/logo.svg" class="h-10" alt="logo">
+            </a>
+                      
+            <?php  
+            //DEFINING ARGUMENTS TO PASS WP_NAV_MENU, SO WE CAN ADD TAILWIND CLASSES TO THE MENU      
             $args = [
                 'menu'                 => 'primary',
                 'container'            => 'ul',
@@ -50,10 +53,8 @@
                 'walker'               => '',
                 'theme_location'       => 'primary'     
             ];
+            // MENU INSERT
             wp_nav_menu($args);
             ?>
+            
         </nav>
-
-   
-    
-   

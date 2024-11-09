@@ -20,7 +20,7 @@ function load_bootstrap(){
         get_theme_file_uri('assets/bootstrap-5.3.3-dist/js/bootstrap.min.js'),
         array('jquery'),
         '', //version
-        true //true > loads script before closing body tag
+        true //if true > loads script before closing body tag
     );
 };
 
@@ -33,44 +33,5 @@ function load_tailwind(){
     );
 };
 
-
-
-add_action('wp_enqueue_scripts','load_tailwind');  //LOADS TAILWIND
 add_action('wp_enqueue_scripts','primary_stylesheet'); //LOADS STYLES WHEN WORDPRESS IS LOADING SCRIPTS
-//add_action('wp_enqueue_scripts','load_bootstrap');  //LOADS BOOTSTRAP
-
-
-
-// function replace_content( $text_content ) {
-	
-// 		$text = array(
-// 			'<p>' => '<p class="text-black">',
-// 			'<h1 class="wp-block-heading">' => '<h1 class="text-lg text-black wp-block-heading">',
-//             '<a class="wp-block-button__link wp-element-button">' => '<a class="wp-block-button__link wp-element-button bg-lightblue">',
-// 		);
-
-// 		$text_content = str_ireplace( array_keys( $text ), $text, $text_content );
-	
-
-// 	return $text_content;
-// }
-// add_filter( 'the_content', 'replace_content' );
-
-
-// *****************************************************
-//add_action("hook name", "function name")
-
-//wp_enqueue_scripts
-
-
-//NEVER CLOSE THE PHP TAG
-
-
-//PREBUILT FUNCTION TO ADD 3 IMAGES, FIND IN THE HANDBOOK //INCLASS ASSIGNMENT
-
-//ASSIGNMENT 2, UPLOAD THE THEME TO PANTHEON USING ANOTHER SANDBOX,
-//CREATE A NEW SITE, INSTALL WORDPRESS, AND THEME UPLOAD THE THEME, WORK AS A TEAM, SETUP ON LOCALHOST
-//ONCE WE FINISH IN LOCALHOST, THEN UPLOAD TO PANTHEON THE FINAL CODE, AND DO MINOR TWEAKS
-//WE CAN UPLOAD TO FILEZILLA, USING NEW CREDENTIALS, A NEW HOST, A NEW USERNAME, KEYFILE IS THE SAME
-//CAUSE IT RELATES TO THE COMPUTER
-// *****************************************************
+add_action('wp_enqueue_scripts','load_tailwind');  //LOADS TAILWIND

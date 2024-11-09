@@ -2,7 +2,7 @@
     <div id="the_content">
         <h2 class="text-center">Find what you love here</h2>
         
-        <div class="flex flex-wrap place-content-around gap-5 px-20 pb-20 pt-3">
+        <div class="flex flex-wrap justify-center gap-2">
             <div class="flex flex-wrap flex-col max-w-[300px] text-center border border-2 border-lightblue rounded-lg p-4">
                 <img class="" src="<?php echo get_theme_file_uri(); ?>/assets/newyork_06.jpg" alt="new york photo 6">
                 <h3 class="font-bold">Amusements & Family Fun</h3>
@@ -29,8 +29,7 @@
                     <a class="wp-block-button__link wp-element-button">Learn More</a>
                 </div>
             </div>
-
-
+            
         </div>
     </div>
 

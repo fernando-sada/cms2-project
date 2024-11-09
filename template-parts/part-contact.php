@@ -1,7 +1,9 @@
 <section>
+    <!-- WRAPPER -->
     <div id="contact-wrapper-all" class="flex flex-wrap gap-10 justify-center p-10 items-center">
-        <!-- Contact Information -->
-        <div class=""> <!-- Column 1 -->
+               
+        <!-- COLUMN 1 -->
+        <div> 
             <p class="flex items-center text-gray-700 font-medium mb-4 gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-lightblue hover:fill-navyblue">
                     <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
@@ -23,9 +25,11 @@
                 </svg> General Support
             </p>
             <p class="text-gray-600">info@newyorktourism.com</p>
-        </div> <!-- Col 1 end-->
+        </div>
+        <!-- END COLUMN 1 -->
 
-        <div class=""> <!-- Column 2 -->
+        <!-- COLUMN 2 -->
+        <div>
             <!-- Contact Form -->
             <div class="mb-8 text-center">
                 <h2 class="text-2xl font-bold text-lightblue mb-4">Send Us A Message</h2>
@@ -61,7 +65,9 @@
                     <button type="submit" class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">SEND MESSAGE</button>
                 </div>
             </form>
-        </div> <!-- Col 2 end-->
+        </div>
+        <!-- END COLUMN 2 -->
     
     </div>
+    <!-- END WRAPPER -->
 </section>

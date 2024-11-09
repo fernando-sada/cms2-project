@@ -1,8 +1,9 @@
         <?php wp_footer();?>
-        <footer class="bg-slate-200">
+        <footer class="bg-black text-white">
 
-        <!-- FOOTER LINKS -->
+        <!-- FOOTER LINKS PART -->
         <?php get_template_part("template-parts/part", "footerlinks")?> 
+        <!-- END FOOTER LINKS PART-->
 
             <div id="footer-content" class="grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto justify-between py-10 px-6">
                 <div id="footer-title" class="p-2">
@@ -35,12 +36,11 @@
                 <div id="footer-newsletter" class="p-2 flex flex-col gap-2">
                     <h5 class="text-lightblue font-bold">Join our Newsletter</h5>
                     <p>Your Email</p>
-                    <input class="p-2" type="text" placeholder="Enter your Email">
-                    <button class="rounded-full p-2 bg-black hover:bg-lightblue text-white" type="submit">Subscribe</button>
+                    <input class="p-2 rounded-lg" type="text" placeholder="Enter your Email">
+                    <button class="rounded-full p-2 bg-lightblue hover:bg-navyblue text-white" type="submit">Subscribe</button>
                 </div>
             </div>
-        </footer>
-    </div> <!-- END CONTAINER -->
+        </footer>    
 
 </body>
 </html>
