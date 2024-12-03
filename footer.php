@@ -1,9 +1,16 @@
         <?php wp_footer();?>
-        <footer class="bg-black text-white py-4">
+        <footer class="bg-black text-white pb-4">
 
-        <!-- FOOTER LINKS PART -->
-        <?php get_template_part("template-parts/part", "footerlinks")?> 
-        <!-- END FOOTER LINKS PART-->
+        <!-- FOOTER WIDGET FAQ BAR -->
+        <div class="bg-navyblue">
+            <?php
+            get_sidebar('footer');
+            ?>
+        </div>
+
+        <!-- FOOTER NAV -->
+        <?php get_template_part("template-parts/part", "footer-nav")?> 
+        <!-- END FOOTER NAV-->
 
             <div id="footer-content" class="grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto justify-between py-10 px-6">
                 <div id="footer-title" class="p-2">

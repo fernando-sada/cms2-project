@@ -17,14 +17,38 @@
                             navyblue: '#00178C',
                             lightblue: '#0083CF',
                             gray: '#E2E8F0'
-                        },                      
-                    },
+                        }                             
+                    } 
                 },
             };
         </script>
     </head>
-    <body>       
-        <nav class="flex sm:flex-row flex-col p-4 justify-between max-w-[1200px] mx-auto items-center">
+    <body>      
+
+        <!-- HEADER WIDGET NEWS BAR -->
+        <div class="bg-navyblue">
+            <?php
+            get_sidebar('header');
+            ?>
+        </div>
+        
+        <!-- SOCIAL MEDIA ICONS-->         
+        <?php the_widget('WP_Widget_Custom_HTML',
+            array(
+                // 'title' => 'Example',
+                'content' => '<section class="bg-black">
+                                <div class="flex max-w-[1200px] mx-auto p-4 gap-4 justify-end">
+                                    <a href="https://instagram.com/newyorktourism" target="_blank"><i class="fa-brands text-white hover:text-lightblue fa-instagram"></i></a>
+                                    <a href="https://facebook.com/newyorktourism" target="_blank"><i class="fa-brands text-white hover:text-lightblue fa-facebook"></i></a>
+                                    <a href="https://x.com/newyorktourism" target="_blank"><i class="fa-brands text-white hover:text-lightblue fa-x-twitter"></i></a>
+                                    <a href="https://www.youtube.com/watch?v=MtCMtC50gwY" target="_blank"><i class="fa-brands text-white hover:text-lightblue fa-youtube"></i></a>
+                                </div>    
+                            </section>'
+                )
+            );
+        ?>
+
+        <nav class="flex sm:flex-row flex-col p-4 pb-0 justify-between max-w-[1200px] mx-auto items-center">
 
             <!-- LOGO -->
             <a href="<?php echo get_home_url();?>">
@@ -32,29 +56,20 @@
             </a>
                       
             <?php  
-            //DEFINING ARGUMENTS TO PASS WP_NAV_MENU, SO WE CAN ADD TAILWIND CLASSES TO THE MENU      
-            $args = [
-                'menu'                 => 'primary',
-                'container'            => 'ul',
-                'container_class'      => '',
-                'container_id'         => '',
-                'container_aria_label' => '',
-                'menu_class'           => 'font-medium flex flex-col sm:flex-row sm:gap-10 py-4 sm:py-0 gap-4 w-full sm:w-auto text-center', //ADD Tailwind class to <ul> here
-                'menu_id'              => '',
-                'echo'                 => true,
-                'fallback_cb'          => 'wp_page_menu',
-                'before'               => '',
-                'after'                => '',
-                'link_before'          => '',
-                'link_after'           => '',
-                'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'item_spacing'         => 'preserve',
-                'depth'                => 0,
-                'walker'               => '',
-                'theme_location'       => 'primary'     
-            ];
-            // MENU INSERT
-            wp_nav_menu($args);
+           // PRIMARY NAV
+            wp_nav_menu(
+                array(
+                    'theme_location'       => 'primary',
+                    'container'            => 'ul',   
+                    'menu_class'           => 'font-medium flex flex-col sm:flex-row sm:gap-10 py-4 sm:py-0 gap-4 w-full sm:w-auto text-center'
+                )
+            );
             ?>
             
-        </nav>
+        </nav>        
+
+        <!-- SEARCH BAR -->
+        <div id="search_form_container" class="p-4">
+            <?php get_search_form() ?>
+        </div>
+        
