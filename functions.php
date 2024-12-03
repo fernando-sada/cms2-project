@@ -78,6 +78,7 @@ function footer_faq(){
 	);
 };
 
+/* SHORTCODE BUTTON with LABEL and URL as Arguments*/
 function contact_us($atts, $content){
     $named_atts = shortcode_atts(
         array(
@@ -92,6 +93,69 @@ function contact_us($atts, $content){
     $content = '<a target="'.$named_atts['target'].'" class="'.$named_atts['class'].'" href="'.$named_atts['link'].'">'.$named_atts['button_name'].'</a>';
     return $content;
 };
+
+/* Custom Menu for WP Admin Dashboard */
+function custom_admin_setting(){
+    //Adds a top-level menu page
+    add_menu_page(
+        'Header Phone Number', //page title
+        'Header Phone Number', //menu title
+        'manage_options', //capability
+        'custom_admin_setting', //Slug
+        'callback_admin_setting', //Callback function to display admin page content, when you click the setting, this function will be called and will display  its content
+        'dashicons-phone', //Icon for the menu OR dashicons on google
+        100 //position
+    );
+}
+
+//callback function
+function callback_admin_setting(){
+    ?>
+    <div class="wrap">
+        <h1>Admin Settings</h1>
+        <form action="options.php" method="post">
+            <?php
+            settings_fields('theme-settings-group');
+            do_settings_sections('custom_admin_setting');
+            submit_button('Save Settings');
+            ?>
+        </form>
+    </div>
+    <?php
+}
+
+//Register and Show Settings
+function custom_admin_fields_settings(){
+    //register settings
+    register_setting('theme-settings-group', 'theme_phone');
+    //create a username section (can create multiple sections like this)
+    add_settings_section(
+        'theme_setting_section', //Section ID
+        'Header Phone Number', //Section Title
+        'theme_settings_section_callback', //Callback function for display section content
+        'custom_admin_setting' //Page Slug (where the section belongs)
+    );
+    add_settings_field(
+        'theme_user_name', //Field ID
+        'Phone Number', //Field Title
+        'theme_admin_name_field_callback', //Callback function to display the field
+        'custom_admin_setting', //Page Slug (where the field appears)
+        'theme_setting_section' //Section ID (where the field belongs)
+    );
+}
+
+function theme_settings_section_callback(){
+    echo '<p>Enter the phone number to display in Header Section of the page:</p>';
+}
+
+function theme_admin_name_field_callback(){
+    $user_phone = get_option('theme_phone');
+    echo '<input type="tel" id="phone" name="theme_phone" placeholder="343-001-0123" value="' . esc_attr($user_phone) . '" />';    
+}
+
+add_action('admin_init', 'custom_admin_fields_settings'); 
+
+add_action('admin_menu', 'custom_admin_setting'); //Adds a new admin menu to the WP Dashboard
 
 add_shortcode('button_shortcode', 'contact_us'); //ADD SHORTCODE CONTACT US
 
